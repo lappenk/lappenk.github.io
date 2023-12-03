@@ -1,0 +1,360 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces) 
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* IMPORT FONTS */
+
+@font-face {
+    font-family: "lato";
+    src: url('../fonts/sans-serif/lato-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url('../fonts/sans-serif/montserrat-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "opensans";
+    src: url('../fonts/sans-serif/opensans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url('../fonts/sans-serif/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "josefinslab";
+    src: url('../fonts/serif/josefinslab-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "robotoslab";
+    src: url('../fonts/serif/robotoslab-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "rozhaone";
+    src: url('../fonts/serif/rozhaone-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "ultra";
+    src: url('../fonts/serif/ultra-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TYPOGRAPHY */
+
+p {
+    font-family: roboto, Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: lato, helvetica, sans-serif;
+    letter-spacing: 0.0325rem;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+    transform: rotate(-5deg);
+    text-align: center;
+}
+
+h2 h3 {
+    font-size: 2rem;
+}
+
+nav .strike {
+    display: inline-block;
+    text-decoration: line-through;
+    text-transform: uppercase;
+    transform: rotate(5deg);
+    color: #B2C5CB;
+}
+
+
+.highlight {
+    display: inline-block;
+    font-family: rozhaone, Arial, Helvetica, sans-serif;
+    padding: 1rem 1.5rem;
+    border-radius: 0.3rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 0.3rem;
+    color: #D9D9D9;
+    background-color: #847071;
+    box-shadow: 5px 5px 4px -1px #888;
+}
+
+.expand {
+    font-size: 0.5rem;
+}
+
+time {
+    font-style: italic;
+}
+
+figcaption {
+   font-family: roboto; 
+   padding: .5rem; 
+}
+
+
+
+button {
+    display: inline-block;
+    height: 3.25rem;
+    width: 10rem;
+    font-family: ultra, Helvetica, sans-serif;
+    text-transform: uppercase;
+    background-color: #455B68;
+    color: #faf5ef;
+    box-shadow: 5px 5px 4px -1px #888;
+    margin-left: 1.25rem;
+    font-size: 1.2rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+/* GENERAL SET UP AND DEFAULTS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+
+
+
+/* LAYOUT */
+
+header {
+    padding: 0.5rem 0rem 1rem 0rem;
+}
+
+nav {
+    margin-top: 3rem;
+    padding-left: 1.5rem;
+}
+
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+}
+
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 2px solid #B2C5CB;
+    padding-left: 1.5rem;
+    font-size: .75rem;
+}
+
+
+aside p
+{
+    border-bottom: 2px solid #B2C5CB;
+    padding-bottom: 2rem;
+}
+
+
+.subsection {
+    display: flex;
+}
+
+
+footer {
+    font-size: 0.75rem;
+    height: 5rem;
+    padding: 2rem;
+}
+
+.copyright {
+    float: left;
+}
+
+.attribution {
+    float: right;
+}
+
+
+
+
+
+
+
+
+/* IMAGES AND FIGURES */
+
+img {
+    width: 100%; 
+    max-width: fit-content;
+}
+
+figure {
+    margin: 0px;
+}
+
+.article-image {
+    width: 33% fit-content;
+    float: left;
+    margin-right: 0.75rem;
+}
+
+.subsection figure {
+    display: table;
+    margin: 0rem 1.1rem;  
+    background-color: #B9BAB5;
+    flex:  1;
+}
+
+img aside {
+    width: 45%;
+    height: 45%;
+}
+
+
+
+
+
+
+
+
+/* LINKS AND NAVIGATION */
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1.25rem 2rem;
+    font-size: 1.5rem;
+    font-family: lato, Arial, Helvetica, sans-serif;
+    color: #503838;
+}
+
+nav {
+    border-top: 0.125rem solid #3D4B4B;
+    border-bottom: 0.125rem solid #3D4B4B;
+}
+
+nav a:focus, nav a:hover {
+    color: #fff;
+    background-color: #3D4B4B;
+}
+
+a:link, a:visited {
+    color: #503838;
+}
+
+a:focus, a:hover {
+    text-decoration: none;
+}
+
+
+
+
+
